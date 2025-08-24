@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  background-color: #aaaaaa;
+}
+
+.a4 {
+  width: 210mm;
+  height: 297mm;
+
+  box-shadow: 0 0 4mm rgba(0, 0, 0, 0.15);
+}
