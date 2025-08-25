@@ -19,9 +19,9 @@ export default function SkillElement({ skill, level }: Props) {
   };
   return (
     <div className="mt-3">
-      <span className="text-xs mb-1">
+      <p className="text-xs mb-1">
         <span className="hidden md:inline">-</span> {skill}
-      </span>
+      </p>
       <Skillbar level={level} />
     </div>
   );

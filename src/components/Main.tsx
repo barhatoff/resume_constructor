@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <div className="bg-gray-300 a4 m-auto" id="Main">
       <Header />
-      <div className="flex h-10">
+      <div className="flex">
         <LeftColumn />
         <RightColumn />
       </div>
