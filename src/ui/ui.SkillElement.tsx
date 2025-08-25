@@ -8,7 +8,7 @@ export default function SkillElement({ skill, level }: Props) {
     const array = new Array(5).fill(0);
     return (
       <div className="flex justify-between">
-        {array.map((e, index) => (
+        {array.map((_, index) => (
           <div
             className={`w-2/12 h-1 rounded-sm ${index + 1 > level ? "bg-sky-100" : "bg-emerald-400"}`}
             key={`skill_elem_${index}`}
