@@ -10,12 +10,15 @@ export const constant = {
   github_link: import.meta.env.VITE_GITHUB ?? "git",
   linkedin_link: import.meta.env.VITE_LINKEDIN ?? "linkedin",
   skills: [
-    { skill: "Frontend: ReactTS, SASS, TailwindCSS, MUI", level: 3 as 3 },
-    { skill: "Backend: TS, Express, JWT", level: 3 as 3 },
-    { skill: "DataBases: MongoDB, PostgreSQL", level: 3 as 3 },
-    { skill: "UNIT: Jest", level: 2 as 2 },
-    { skill: "Socket.io", level: 2 as 2 },
-    { skill: "TCP/IP", level: 2 as 2 },
+    {
+      skill: "Frontend: React (TS), Redux Toolkit, SASS, TailwindCSS, MUI",
+      level: 3 as 3,
+    },
+    { skill: "Backend: Node.js (TS), Express, JWT", level: 3 as 3 },
+    { skill: "Databases: MongoDB, PostgreSQL", level: 3 as 3 },
+    { skill: "Testing: Jest (unit, integration)", level: 2 as 2 },
+    { skill: "Real-time: Socket.io, WebSockets", level: 2 as 2 },
+    { skill: "Networking: TCP/IP basics", level: 2 as 2 },
   ],
   education: {
     university: import.meta.env.VITE_EDUCATION ?? "university",
