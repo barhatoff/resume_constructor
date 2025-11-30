@@ -27,6 +27,8 @@ export default function Demo() {
     const projectGallery = constant[galeryKey];
     const projectData = constant[dataKey];
 
+    console.log(projectData.url.length > 0);
+
     return (
       <div className="w-10/12 mx-auto xl:mt-10 md:mt-30 mt-10">
         <Swiper
@@ -45,7 +47,7 @@ export default function Demo() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {projectData.url.lenght > 0 ? (
+        {projectData.url.length > 0 ? (
           <ButtonDemo
             event={() => {
               window.open(projectData.url);
