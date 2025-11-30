@@ -2,8 +2,7 @@
 services:
   - type: static
     name: my-static-spa
-
     staticPublishPath: ./dist
     rewrites:
-      - from: /.*
+      - from: /*
         to: /index.html
