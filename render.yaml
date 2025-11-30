@@ -1,8 +1,0 @@
-# render.yaml
-services:
-  - type: static
-    name: my-static-spa
-    staticPublishPath: ./dist
-    rewrites:
-      - from: /*
-        to: /index.html
