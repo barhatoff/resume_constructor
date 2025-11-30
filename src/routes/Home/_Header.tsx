@@ -1,14 +1,10 @@
-import { constant } from "../constants/constant";
+import { constant } from "../../constants/constant";
 
 export default function Header() {
   return (
     <div className="w-full h-2/12 flex bg-emerald-400">
       <div className="w-1/4">
-        <img
-          src={constant.photo_url}
-          className="w-full h-full object-cover"
-          alt="avatar"
-        />
+        <img src={constant.photo_url} className="w-full h-full object-cover" alt="avatar" />
       </div>
       <div className="w-3/4 p-5">
         <h1 className="font-medium text-2xl">{constant.name}</h1>

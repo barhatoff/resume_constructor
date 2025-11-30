@@ -3,7 +3,7 @@ type Props = {
   title: string;
 };
 
-export default function Button({ event, title }: Props) {
+export default function PDFButton({ event, title }: Props) {
   return (
     <button
       onClick={() => event()}

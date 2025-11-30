@@ -78,7 +78,14 @@ export default function PdfLeftColumn({ styles }: { styles: any }) {
 
     return (
       <View style={{ marginTop: 12 }}>
-        <Text style={{ fontSize: 8, marginBottom: 4 }}>- {skill}</Text>{" "}
+        <Text
+          style={{
+            fontSize: 8,
+            marginBottom: 4,
+          }}
+        >
+          - {skill}
+        </Text>
         <Skillbar level={level} />
       </View>
     );

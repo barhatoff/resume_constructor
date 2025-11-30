@@ -1,7 +1,7 @@
 export const constant = {
+  app_url: import.meta.env.VITE_APP_URL ?? "",
   photo_url:
-    import.meta.env.VITE_PHOTO_URL ??
-    "https://ionicframework.com/docs/img/demos/avatar.svg",
+    import.meta.env.VITE_PHOTO_URL ?? "https://ionicframework.com/docs/img/demos/avatar.svg",
   name: import.meta.env.VITE_NAME ?? "name surname",
   position: import.meta.env.VITE_POSITION ?? "position",
   city: import.meta.env.VITE_CITY ?? "city",
@@ -14,7 +14,9 @@ export const constant = {
       skill: "Frontend: React (TS), Redux Toolkit, SASS, TailwindCSS, MUI",
       level: 3 as 3,
     },
+    { skill: "Angular (Services, Guards), Angular Material", level: 2 as 2 },
     { skill: "Backend: Node.js (TS), Express, JWT", level: 3 as 3 },
+    { skill: ".NET (ASP.NET Core Web API, Entity Framework Core)", level: 2 as 2 },
     { skill: "Databases: MongoDB, PostgreSQL", level: 3 as 3 },
     { skill: "Testing: Jest (unit, integration)", level: 2 as 2 },
     { skill: "Real-time: Socket.io, WebSockets", level: 2 as 2 },
@@ -25,6 +27,11 @@ export const constant = {
     dateRange: "September 2020 - June 2024",
   },
   employment_history: JSON.parse(import.meta.env.VITE_EMPLOYMENT_HISTORY) ?? [
-    { employer: "?", range: "?", workdone: [{ title: "?", content: "?" }] },
+    { employer: "?", range: "?", workdone: [{ title: "?", content: "?", url: "?" }] },
   ],
+
+  galery_1: JSON.parse(import.meta.env.VITE_GALERY_1) ?? [""],
+  galery_1_data: JSON.parse(import.meta.env.VITE_GALERY_1_DATA) ?? {},
+  galery_2: JSON.parse(import.meta.env.VITE_GALERY_2) ?? [""],
+  galery_2_data: JSON.parse(import.meta.env.VITE_GALERY_2_DATA) ?? {},
 };

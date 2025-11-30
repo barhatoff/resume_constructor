@@ -5,6 +5,8 @@ body {
   font-optical-sizing: auto;
   font-size: 14px;
   background-color: #aaaaaa;
+  --swiper-navigation-color: "#007aff";
+  --swiper-pagination-color: "#007aff";
 }
 
 .a4 {
