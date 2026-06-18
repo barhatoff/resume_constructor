@@ -11,7 +11,7 @@ export default function RightColumn() {
         <p className="text-xs">{constant.education.dateRange}</p>
       </div>
       <div>
-        <h2 className="text-2xl font-medium mt-15">Employment History</h2>
+        <h2 className="text-2xl mt-15 font-bold ">Employment History</h2>
         {constant.employment_history.map((elem: EmploymentHistoryElem, i: number) => (
           <EmploymentElem
             employer={elem.employer}

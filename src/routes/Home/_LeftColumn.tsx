@@ -12,9 +12,14 @@ export default function LeftColumn() {
         ]}
       />
       <div className="mt-10">
-        <h3 className="font-medium">Skills</h3>
+        <h3 className="font-medium text-2xl">Skills</h3>
         {constant.skills.map((elem, i) => (
-          <SkillElement skill={elem.skill} level={elem.level} key={`skill_element_${i}`} />
+          <SkillElement
+            title={elem.title}
+            skill={elem.skill}
+            level={elem.level}
+            key={`skill_element_${i}`}
+          />
         ))}
       </div>
     </div>

@@ -7,6 +7,7 @@ type PdfLinksProps = {
   links: { url: string; label: string }[];
 };
 type PdfSkillElementProps = {
+  title: string;
   skill: string;
   level: 1 | 2 | 3 | 4 | 5;
 };
@@ -56,7 +57,7 @@ export default function PdfLeftColumn({ styles }: { styles: any }) {
       </View>
     );
   };
-  const PdfSkillElement = ({ skill, level }: PdfSkillElementProps) => {
+  const PdfSkillElement = ({ title, skill, level }: PdfSkillElementProps) => {
     const Skillbar = ({ level }: { level: number }) => {
       const array = new Array(5).fill(0);
       return (
@@ -78,15 +79,17 @@ export default function PdfLeftColumn({ styles }: { styles: any }) {
 
     return (
       <View style={{ marginTop: 12 }}>
+        <Text style={{ fontSize: 8, fontWeight: "medium" }}>{title}</Text>
         <Text
           style={{
             fontSize: 8,
+            marginLeft: 2,
             marginBottom: 4,
           }}
         >
           - {skill}
         </Text>
-        <Skillbar level={level} />
+        {/* <Skillbar level={level} /> */}
       </View>
     );
   };
@@ -103,6 +106,7 @@ export default function PdfLeftColumn({ styles }: { styles: any }) {
         <Text style={{ fontWeight: 500, fontSize: 10 }}>Skills</Text>
         {constant.skills.map((elem, i) => (
           <PdfSkillElement
+            title={elem.title}
             skill={elem.skill}
             level={elem.level}
             key={`pdf_skill_element_${i}`}

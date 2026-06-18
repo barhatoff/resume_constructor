@@ -1,7 +1,8 @@
 export const constant = {
   app_url: import.meta.env.VITE_APP_URL ?? "",
   photo_url:
-    import.meta.env.VITE_PHOTO_URL ?? "https://ionicframework.com/docs/img/demos/avatar.svg",
+    import.meta.env.VITE_PHOTO_URL ??
+    "https://ionicframework.com/docs/img/demos/avatar.svg",
   name: import.meta.env.VITE_NAME ?? "name surname",
   position: import.meta.env.VITE_POSITION ?? "position",
   city: import.meta.env.VITE_CITY ?? "city",
@@ -11,27 +12,55 @@ export const constant = {
   linkedin_link: import.meta.env.VITE_LINKEDIN ?? "linkedin",
   skills: [
     {
-      skill: "Frontend: React (TS), Redux Toolkit, SASS, TailwindCSS, MUI",
-      level: 3 as 3,
+      title: "Frontend",
+      skill: "Angular, Angular Material, RxJS",
+      level: 3 as const,
     },
-    { skill: "Angular (Services, Guards), Angular Material", level: 2 as 2 },
-    { skill: "Backend: Node.js (TS), Express, JWT", level: 3 as 3 },
-    { skill: ".NET (ASP.NET Core Web API, Entity Framework Core)", level: 2 as 2 },
-    { skill: "Databases: MongoDB, PostgreSQL", level: 3 as 3 },
-    { skill: "Testing: Jest (unit, integration)", level: 2 as 2 },
-    { skill: "Real-time: Socket.io, WebSockets", level: 2 as 2 },
-    { skill: "Networking: TCP/IP basics", level: 2 as 2 },
+    {
+      title: "Backend",
+      skill: "NestJS, ASP.NET",
+      level: 3 as const,
+    },
+    {
+      title: "Databases & ORMs",
+      skill: "PostgreSQL, MongoDB, Prisma Core",
+      level: 3 as const,
+    },
+    {
+      title: "DevOps & Infrastructure",
+      skill: "Linux, Docker, Nginx, TCP/IP, CI/CD",
+      level: 3 as const,
+    },
+    {
+      title: "Testing & Quality",
+      skill: "Jest (unit, integration)",
+      level: 2 as const,
+    },
+    {
+      title: "Real-time & Network",
+      skill: "Socket.io, WebSockets",
+      level: 2 as const,
+    },
+    {
+      title: "Libraries & Tools",
+      skill: "JWT, Puppeteer, Handlebars",
+      level: 2 as const,
+    },
   ],
   education: {
     university: import.meta.env.VITE_EDUCATION ?? "university",
     dateRange: "September 2020 - June 2024",
   },
   employment_history: JSON.parse(import.meta.env.VITE_EMPLOYMENT_HISTORY) ?? [
-    { employer: "?", range: "?", workdone: [{ title: "?", content: "?", url: "?" }] },
+    {
+      employer: "?",
+      range: "?",
+      workdone: [{ title: "?", content: "?", url: "?" }],
+    },
   ],
 
   galery_1: JSON.parse(import.meta.env.VITE_GALERY_1) ?? [""],
   galery_1_data: JSON.parse(import.meta.env.VITE_GALERY_1_DATA) ?? {},
-  galery_2: JSON.parse(import.meta.env.VITE_GALERY_2) ?? [""],
-  galery_2_data: JSON.parse(import.meta.env.VITE_GALERY_2_DATA) ?? {},
+  // galery_2: JSON.parse(import.meta.env.VITE_GALERY_2) ?? [""],
+  // galery_2_data: JSON.parse(import.meta.env.VITE_GALERY_2_DATA) ?? {},
 };

@@ -1,9 +1,10 @@
 type Props = {
+  title: string;
   skill: string;
   level: 1 | 2 | 3 | 4 | 5;
 };
 
-export default function SkillElement({ skill, level }: Props) {
+export default function SkillElement({ title, skill, level }: Props) {
   const Skillbar = ({ level }: { level: number }) => {
     const array = new Array(5).fill(0);
     return (
@@ -19,10 +20,9 @@ export default function SkillElement({ skill, level }: Props) {
   };
   return (
     <div className="mt-3">
-      <p className="text-xs mb-1">
-        <span className="hidden md:inline">-</span> {skill}
-      </p>
-      <Skillbar level={level} />
+      <p className="font-medium">{title}</p>
+      <p className="text-xs mb-1 ml-2">{skill}</p>
+      {/* <Skillbar level={level} /> */}
     </div>
   );
 }

@@ -31,7 +31,13 @@ export default function PdfRightColumn({ styles }: { styles: any }) {
                 style={{ flexDirection: "row", paddingLeft: 20, marginTop: 10 }}
               >
                 <Text style={{ marginRight: 8, fontSize: 10 }}>•</Text>
-                <Text style={{ fontSize: 10 }}>
+                <View
+                  style={{
+                    fontSize: 10,
+                    flexDirection: "column",
+                    flex: 1,
+                  }}
+                >
                   <Text
                     style={{
                       fontWeight: "medium",
@@ -39,8 +45,14 @@ export default function PdfRightColumn({ styles }: { styles: any }) {
                   >
                     {elem.title}
                   </Text>
-                  <Text> {elem.content}</Text>
-                </Text>
+                  {elem.content
+                    .split(/•\s*/)
+                    .map((v) => v.trim())
+                    .filter((v) => v.length > 0)
+                    .map((v) => (
+                      <Text style={{ marginLeft: 5 }}>- {v}</Text>
+                    ))}
+                </View>
               </View>
               <Link
                 src={formatUrl(elem.url)}
@@ -68,18 +80,24 @@ export default function PdfRightColumn({ styles }: { styles: any }) {
         <Text style={{ fontWeight: 500, marginTop: 10, fontSize: 10 }}>
           {constant.education.university}
         </Text>
-        <Text style={{ fontSize: 8, marginTop: 2 }}>{constant.education.dateRange}</Text>
+        <Text style={{ fontSize: 8, marginTop: 2 }}>
+          {constant.education.dateRange}
+        </Text>
       </View>
       <View>
-        <Text style={{ fontSize: 18, fontWeight: 500, marginTop: 45 }}>Employment History</Text>
-        {constant.employment_history.map((elem: EmploymentHistoryElem, i: number) => (
-          <PdfEmploymentElem
-            employer={elem.employer}
-            range={elem.range}
-            workdone={elem.workdone}
-            key={`employment_elem_${i}`}
-          />
-        ))}
+        <Text style={{ fontSize: 18, fontWeight: 500, marginTop: 45 }}>
+          Employment History
+        </Text>
+        {constant.employment_history.map(
+          (elem: EmploymentHistoryElem, i: number) => (
+            <PdfEmploymentElem
+              employer={elem.employer}
+              range={elem.range}
+              workdone={elem.workdone}
+              key={`employment_elem_${i}`}
+            />
+          ),
+        )}
       </View>
     </View>
   );
