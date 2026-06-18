@@ -57,25 +57,25 @@ export default function PdfLeftColumn({ styles }: { styles: any }) {
       </View>
     );
   };
-  const PdfSkillElement = ({ title, skill, level }: PdfSkillElementProps) => {
-    const Skillbar = ({ level }: { level: number }) => {
-      const array = new Array(5).fill(0);
-      return (
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          {array.map((_, index) => (
-            <View
-              key={`skill_elem_${index}`}
-              style={{
-                width: "18%",
-                height: 3,
-                borderRadius: 2,
-                backgroundColor: index + 1 > level ? "#E0F2FE" : "#00d492",
-              }}
-            />
-          ))}
-        </View>
-      );
-    };
+  const PdfSkillElement = ({ title, skill }: PdfSkillElementProps) => {
+    // const Skillbar = ({ level }: { level: number }) => {
+    //   const array = new Array(5).fill(0);
+    //   return (
+    //     <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+    //       {array.map((_, index) => (
+    //         <View
+    //           key={`skill_elem_${index}`}
+    //           style={{
+    //             width: "18%",
+    //             height: 3,
+    //             borderRadius: 2,
+    //             backgroundColor: index + 1 > level ? "#E0F2FE" : "#00d492",
+    //           }}
+    //         />
+    //       ))}
+    //     </View>
+    //   );
+    // };
 
     return (
       <View style={{ marginTop: 12 }}>

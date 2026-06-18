@@ -4,20 +4,20 @@ type Props = {
   level: 1 | 2 | 3 | 4 | 5;
 };
 
-export default function SkillElement({ title, skill, level }: Props) {
-  const Skillbar = ({ level }: { level: number }) => {
-    const array = new Array(5).fill(0);
-    return (
-      <div className="flex justify-between">
-        {array.map((_, index) => (
-          <div
-            className={`w-2/12 h-1 rounded-sm ${index + 1 > level ? "bg-sky-100" : "bg-emerald-400"}`}
-            key={`skill_elem_${index}`}
-          />
-        ))}
-      </div>
-    );
-  };
+export default function SkillElement({ title, skill }: Props) {
+  // const Skillbar = ({ level }: { level: number }) => {
+  //   const array = new Array(5).fill(0);
+  //   return (
+  //     <div className="flex justify-between">
+  //       {array.map((_, index) => (
+  //         <div
+  //           className={`w-2/12 h-1 rounded-sm ${index + 1 > level ? "bg-sky-100" : "bg-emerald-400"}`}
+  //           key={`skill_elem_${index}`}
+  //         />
+  //       ))}
+  //     </div>
+  //   );
+  // };
   return (
     <div className="mt-3">
       <p className="font-medium">{title}</p>
